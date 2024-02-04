@@ -32,30 +32,32 @@ export default function TabButtons() {
 
     return (
         <Section id="examples" title="Examples">
-            <Tabs buttons={
-                <>
-                    <TabButton
-                        label="Components"
-                        isSelected={selectedTopic === 'components'}
-                        onSelect={() => handleSelect('components')}
-                    />
-                    <TabButton
-                        label="JSX"
-                        isSelected={selectedTopic === 'jsx'}
-                        onSelect={() => handleSelect('jsx')}
-                    />
-                    <TabButton
-                        label="Props"
-                        isSelected={selectedTopic === 'props'}
-                        onSelect={() => handleSelect('props')}
-                    />
-                    <TabButton
-                        label="State"
-                        isSelected={selectedTopic === 'state'}
-                        onSelect={() => handleSelect('state')}
-                    />
-                </>
-            }>
+            <Tabs
+                ButtonsContainer="menu"
+                buttons={
+                    <>
+                        <TabButton
+                            label="Components"
+                            isSelected={selectedTopic === 'components'}
+                            onSelect={() => handleSelect('components')}
+                        />
+                        <TabButton
+                            label="JSX"
+                            isSelected={selectedTopic === 'jsx'}
+                            onSelect={() => handleSelect('jsx')}
+                        />
+                        <TabButton
+                            label="Props"
+                            isSelected={selectedTopic === 'props'}
+                            onSelect={() => handleSelect('props')}
+                        />
+                        <TabButton
+                            label="State"
+                            isSelected={selectedTopic === 'state'}
+                            onSelect={() => handleSelect('state')}
+                        />
+                    </>
+                }>
                 {tabContent}
             </Tabs>
 
